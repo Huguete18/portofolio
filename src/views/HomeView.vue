@@ -70,8 +70,32 @@
                   Lorem ipsum dolor sit amet <br /> consectetur adipisicing <br /> consectetur adipisicing
                 </p>
               </div>
+              <div class="child">
+                <v-btn icon="fas fa-mobile-alt" color="#fb7e7e" class="text-white"></v-btn>
+                <h3 class="ml-3 mt-4">App Design</h3>
+                <p class="text-grey ml-3 mt-4 text-caption">
+                  Lorem ipsum dolor sit amet <br /> consectetur adipisicing <br /> consectetur adipisicing
+                </p>
+              </div>
+              <div class="child">
+                <v-btn icon="fas fa-camera" color="#fb7e7e" class="text-white"></v-btn>
+                <h3 class="ml-3 mt-4">Photography</h3>
+                <p class="text-grey ml-3 mt-4 text-caption">
+                  Lorem ipsum dolor sit amet <br /> consectetur adipisicing <br /> consectetur adipisicing
+                </p>
+              </div>
             </v-col>
           </v-row>
+          <v-divider></v-divider>
+        </div>
+      </v-col>
+      <v-col cols="12" sm="12" id="services">
+        <div class="d-flex justify-center mb-6">
+          <v-btn color="#fb7e7e" class="mr-2">All</v-btn>
+          <v-btn class="mr-2" variant="tonal">Web Design</v-btn>
+          <v-btn class="mr-2" variant="tonal">Fron Design</v-btn>
+          <v-btn class="mr-2" variant="tonal">Photography</v-btn>
+          <v-btn variant="tonal">Illustration</v-btn>
         </div>
       </v-col>
     </v-container>
