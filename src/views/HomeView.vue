@@ -98,13 +98,124 @@
           <v-btn variant="tonal">Illustration</v-btn>
         </div>
       </v-col>
+      <v-col cols="12" class="imgHover">
+        <v-row class="fill-height" align="center" justify="center">
+          <template v-for="(item, i) in items" :key="i">
+            <v-col cols="12" md="4">
+              <v-hover v-slot="{isHovering, props}">
+                <v-card :elevation="isHovering ? 12: 2" :class="{'on-hover' : isHovering}" v-bind="props">
+                  <v-img :src="item.img" height="225px" cover></v-img>
+                </v-card>
+              </v-hover>
+            </v-col>
+          </template>
+        </v-row>
+      </v-col>
+      <v-col cols="12" sm="12">
+        <div class="d-flex justify-center mb-6">
+          <v-btn color="#fb7e7e" class="mt-4">Load More</v-btn>
+        </div>
+      </v-col>
+      <v-col cols="12" id="page">
+        <div class="pre">
+          <v-row>
+            <v-col cols="12" sm="4">
+              <v-card class="mw-auto" max-width="344" height="">
+                <v-img src="i10.jpg" height="200px" cover></v-img>
+                <v-card-title>We provide you best</v-card-title>
+                <v-card-subtitle>
+                  By Sergi Huguet Vazquez | 07 sep 2019
+                </v-card-subtitle>
+                <v-card-text>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero nihil tempora minima dicta praesentium odit nobis.
+                </v-card-text>
+              </v-card>
+            </v-col>
+            <v-col cols="12" sm="4">
+              <v-card class="mw-auto" max-width="344" height="">
+                <v-img src="i11.jpg" height="200px" cover></v-img>
+                <v-card-title>We provide you best</v-card-title>
+                <v-card-subtitle>
+                  By Sergi Huguet Vazquez | 07 sep 2019
+                </v-card-subtitle>
+                <v-card-text>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero nihil tempora minima dicta praesentium odit nobis.
+                </v-card-text>
+              </v-card>
+            </v-col>
+            <v-col cols="12" sm="4">
+              <v-card class="mw-auto" max-width="344" height="">
+                <v-img src="i12.jpg" height="200px" cover></v-img>
+                <v-card-title>We provide you best</v-card-title>
+                <v-card-subtitle>
+                  By Sergi Huguet Vazquez | 07 sep 2019
+                </v-card-subtitle>
+                <v-card-text>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero nihil tempora minima dicta praesentium odit nobis.
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </div>
+      </v-col>
+      <v-col cols="12" id="biog">
+        <div class="hire">
+          <v-row>
+            <v-col cols="12" sm="8">
+              <h1 class="mt-9">Hire me for your awesome project</h1>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit ut quasi ullam voluptate suscipit sed commodi eos officia tenetur dignissimos! Distinctio est aliquam quos voluptatem! Iste corporis omnis mollitia optio!
+              </p>
+            </v-col>
+            <v-col cols="12" sm="4">
+              <v-btn color="#fb7e7e" class="mt-15">Hiere Me</v-btn>
+            </v-col>
+          </v-row>
+        </div>
+      </v-col>
+      <v-col cols="12" sm="12" class="px-16" id="contact">
+        <v-row>
+          <v-col cols="12" sm="4">
+            <div class="child">
+              <h1>Contact Info.</h1>
+              <v-btn icon="fas fa-map-marker-alt" class="mt-10" variant="outline"></v-btn><br />
+              <span class="text-caption">Your Street SYO, Your Area Dream</span><br />
+              <v-btn icon="fas fa-phone-alt" class="mt-10" variant="outline"></v-btn><br />
+              <span class="text-caption">002235 -6547</span><br />
+              <span class="text-caption">002235 -6547</span><br />
+              <v-btn icon="fas fa-envelope" class="mt-10" variant="outline"></v-btn><br />
+              <span class="text-caption">semhuguet@gmail.com</span><br />
+              <span class="text-caption">semhuguet@gmail.com</span><br />
+            </div>
+          </v-col>
+          <v-col cols="12" sm="8">
+            <h1 class="mt-8">Send your message</h1>
+            <v-divider></v-divider>
+            <span class="text-caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt minus repellat repellendus! Aut repellendus temporibus officiis aperiam vero doloribus eius eum ex nostrum accusamus! Temporibus ipsum nesciunt quo ex? Molestias!
+            </span>
+            <v-row class="mt-10">
+              <v-col cols="12" sm="6">
+                <v-text-field label="Name" persistent-hint></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-text-field label="Phone Nomber" persistent-hint></v-text-field>
+              </v-col>
+            </v-row>
+            <v-textarea label="Message" persistent-hint></v-textarea>
+            <v-btn color="#fb7e7e" class="mt-2">Submit Now</v-btn>
+          </v-col>
+        </v-row>
+      </v-col>
     </v-container>
+    <FooterView />
   </v-app>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
 import NavBar from '@/components/NavBar.vue';
+import FooterView from '@/components/FooterView.vue';
 
 export default defineComponent({
   name: 'HomeView',
@@ -136,7 +247,8 @@ export default defineComponent({
   },
 
   components: {
-    NavBar
+    NavBar,
+    FooterView
   },
 });
 </script>
