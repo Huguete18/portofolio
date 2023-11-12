@@ -59,7 +59,7 @@
           </v-slider>
         </div>
       </div>
-      <v-col cols="12" class="padd" id="portofolio">
+      <v-col cols="12" class="padd" id="portfolio">
         <div class="first" id="project">
           <v-row>
             <v-col cols="12">
@@ -252,6 +252,7 @@ export default defineComponent({
   },
 });
 </script>
+
 <style scoped>
   .v-container {
     padding: 16px 0;
