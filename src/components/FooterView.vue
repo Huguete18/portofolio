@@ -2,7 +2,7 @@
     <v-bottom-sheet v-model="sheet">
       <template v-slot:activator="{ props }">
         <div class="text-center">
-          <v-btn v-bind="props" color="purple" size="x-large" text="Click Me"></v-btn>
+          <v-btn v-bind="props" color="#fb7e7e" size="x-large" text="Click Me"></v-btn>
         </div>
       </template>
   
@@ -51,5 +51,4 @@
 </script>
 
 <style>
-
 </style>
